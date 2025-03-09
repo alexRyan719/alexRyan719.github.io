@@ -1,0 +1,61 @@
+html {
+/*   background: #369; */
+  background: black;
+}
+
+body {
+  margin: 0% 15% 0px 15%;
+  background: #369;
+  padding: 1% 5% 5% 5%;
+}
+.code {
+  border: green;
+/*   border-radius: 5%; */
+  padding: 1% 0 0 0;
+  font-size: 20px;
+  background: black;
+  color: white;
+}
+
+pre {
+  font-size: 20px;
+}
+
+.navbar {
+  padding: 1% 2% 1% 2%;
+  background: #368;
+  border: black;
+}
+
+p {
+  margin: 2% 0% 2% 0%;
+/*   padding: 1% 1% 1% 1%; */
+  font-size: 20px;
+}
+
+a href {
+  font-size: 20px;
+/*   padding: 20px; */
+}
+
+ul {
+  list-style-type: circle;
+/*   margin: 0;
+  padding: 0; */
+}
+
+li {
+/*   display: inline; */
+/*   margin: 0, 25%, 0, 25%; */
+/*   padding: 20px; */
+/*   float: right;
+ */
+}
+
+/*
+https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_list-style-type_ex
+
+
+
+
+  */
