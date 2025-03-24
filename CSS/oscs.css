@@ -1,0 +1,50 @@
+html {
+/*   background: #369; */
+  background: black;
+}
+/* 366 */
+body {
+  margin: 0% 15% 0px 15%;
+  background: #366;
+  padding: 1% 5% 5% 5%;
+}
+code {
+  font-size: 20px;
+}
+
+pre {
+  font-size: 20px;
+}
+
+.navbar {
+  padding: 1% 2% 1% 2%;
+  background: #a2d5ab;
+  border: black;
+  border-radius:25px;
+}
+
+p {
+  margin: 2% 0% 2% 0%;
+/*   padding: 1% 1% 1% 1%; */
+  font-size: 20px;
+}
+
+a {
+  color:green;
+  font-size: 25px;
+/*   padding: 20px; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin: 0, 25%, 0, 25%;
+  padding: 20px;
+/*   float: right;
+ */
+}
