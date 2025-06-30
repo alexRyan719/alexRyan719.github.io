@@ -1,5 +1,6 @@
 var globalBrand = ""
 
+window.alert("Made it!");
 
 function switchBrand(brand){
   switch(brand){
