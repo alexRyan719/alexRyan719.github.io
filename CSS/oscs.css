@@ -35,13 +35,13 @@ a {
 /*   padding: 20px; */
 }
 
-ul {
+ul.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+li.navar {
   display: inline;
   margin: 0, 25%, 0, 25%;
   padding: 20px;
