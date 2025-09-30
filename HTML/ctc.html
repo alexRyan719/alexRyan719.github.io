@@ -10,7 +10,7 @@
   </head>
   
   
-  <body>
+    <body id="theBody">
 
      <div id="brandRow">  
       <button onclick="switchBrand('matrix')">Matrix</button>
@@ -21,7 +21,32 @@
       <button onclick="switchBrand('elFuego')">El Fuego</button>
     </div>
 
-    <h1>Online Voting Server</h1>
+    <h1>Cut the Crud</h1>
 
+
+    <div id="quotebox"></div>
+    <div class="row">
+      <button id="nextQuote" class="rowBut" onclick="clickFunc()">NEXT QUOTE</button>
+      <button id="twitterAdd" class="rowBut" onclick="clickFunc()">TWEET THIS</button>
+      <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a>
+      
+       <button id="addQuote" class="rowBut" onclick="showDiv()">ADD QUOTE</button>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=LoveTwitter&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false" onclick="tweetQuote()">Tweet #LoveTwitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <br><br>
+    <div id="newQuoteForm" style="display:block">
+      <form style="align:right, float:right">
+        Your Name:<br>
+        <input type="text" name="authName"><br>
+        Your Words of Wisdom:<br>
+<!--         <input type="text" name="wordsOfWisdom" class="quoteIn"> -->
+        <textarea type="text" name="message" rows="10" cols="30"></textarea>
+        <input type="submit" value="Submit" onclick="addQuote()">
+    </form>
+     </div> 
+    </div>
   </body>
 </html>
+
+
