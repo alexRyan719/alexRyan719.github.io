@@ -1,0 +1,51 @@
+body{
+  margin-top: 5%;
+  background-color:  black;
+}
+#quotebox{
+  height: 75%;
+  width: 50%;
+  margin: auto;
+  padding: 1%;
+  background-color: green;
+  color: black;
+}
+#nextQuote{
+/*   border-radius: 15%;
+  padding: 1%;
+  box-shadow: 15px 15px #000; */
+/*   float: middle; */
+/*   margin: auto; */
+/*   margin-left: 65%; */
+}
+#twitterAdd{
+/*   border-radius: 15%;
+  padding: 1%;
+  box-shadow: 15px 15px #000; */
+/*   float: middle; */
+/*   margin: auto; */
+/*   margin-left: 45%;
+  margin-right: 55%; */
+}
+.row{
+  margin-left: 24%;
+  margin-right: 55%;
+/*    margin: 50%; */
+  padding: 2px;
+  height: 30px;
+  width: 200px; 
+}
+.rowBut{
+  border-radius: 15%;
+  padding: 5%;
+  box-shadow: 15px 15px #000;
+  margin-bottom:1%;
+  margin-top:1%;
+}
+.newQuoteForm{
+  
+}
+.quoteIn{
+  height: 50px;
+  width: 300px;
+}
