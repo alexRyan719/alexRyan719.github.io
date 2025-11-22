@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Reg: All right, but apart from the sanitation, medicine, education, wine, public order, irrigation, roads, the fresh water system and public health, what have the Romans ever done for us?
+Attendee: Brought peace?
+Reg: Oh, peace - shut up!
+Reg: There is not one of us who would not gladly suffer death to rid this country of the Romans once and for all.
+Dissenter: Uh, well, one.
+Reg: Oh, yeah, yeah, there's one. But otherwise, we're solid. -->
+
+<html>
+
+  <head>
+<!--     <link rel="stylesheet" type="text/css" href="./CSS/my_steeze.css"> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/oscs.css">
+    <script src="../JS/oscs.js"></script>
+<!--     <script src="myscripts.js"></script> -->
+  </head>
+  
+  
+  <body>
+    
+
+     <div id="brandRow">  
+      <button onclick="switchBrand('matrix')">Matrix</button>
+      <button onclick="switchBrand('citrusine_')">Citrusine_</button>
+      <button onclick="switchBrand('standard')">Standard</button>
+      <button onclick="switchBrand('submarine')">Submarine</button>
+      <button onclick="switchBrand('pistachio')">Pistachio</button>
+      <button onclick="switchBrand('elFuego')">El Fuego</button>
+    </div>
+
+
+    <div>
+      <img src="../IMG/math_blaster_cover.jpg" alt="math blaster cover">
+      <p>
+        Math Blaster was one of my favorite learning tools. It was an early example of gameification. 
+      </p>
+      <h3>
+        OVS - Online Voting System
+      </h3>
+
+      <p>
+        This is a concept for an Online Voting System through email and verified publicly via a website. 
+      </p>
+
+    </div>
+
+
+    <div>
+      <h1>
+        
+      </h1>
+      <p>
+        Using Minikube to Create a Cluster
+Objectives
+ - Learn what a Kubernetes cluster is.
+ - Learn what Minikube is.
+ - Start a Kubernetes cluster on your computer.
+
+        
+Kubernetes Clusters
+Kubernetes is a production-grade, open-source platform that orchestrates the placement (scheduling) 
+        and execution of application containers within and across computer clusters.
+Kubernetes coordinates a highly available cluster of computers that are connected to work as a single 
+        unit. The abstractions in Kubernetes allow you to deploy containerized applications to a cluster 
+        without tying them specifically to individual machines. To make use of this new model of 
+        deployment, applications need to be packaged in a way that decouples them from individual hosts: 
+        they need to be containerized. Containerized applications are more flexible and available than 
+        in past deployment models, where applications were installed directly onto specific machines as 
+        packages deeply integrated into the host. Kubernetes automates the distribution and scheduling 
+        of application containers across a cluster in a more efficient way. Kubernetes is an open-source 
+        platform and is production-ready.
+
+A Kubernetes cluster consists of two types of resources:
+
+The Control Plane coordinates the cluster
+Nodes are the workers that run applications
+Cluster Diagram
+
+The Control Plane is responsible for managing the cluster. The Control Plane coordinates all activities 
+        in your cluster, such as scheduling applications, maintaining applications' desired state, 
+        scaling applications, and rolling out new updates.
+
+Control Planes manage the cluster and the nodes that are used to host the running applications.
+A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster. Each 
+        node has a Kubelet, which is an agent for managing the node and communicating with the 
+        Kubernetes control plane. The node should also have tools for handling container operations, 
+        such as containerd or CRI-O. A Kubernetes cluster that handles production traffic should 
+        have a minimum of three nodes because if one node goes down, both an etcd member and a 
+        control plane instance are lost, and redundancy is compromised. You can mitigate this 
+        risk by adding more control plane nodes.
+
+When you deploy applications on Kubernetes, you tell the control plane to start the application 
+        containers. The control plane schedules the containers to run on the cluster's nodes. 
+        Node-level components, such as the kubelet, communicate with the control plane using 
+        the Kubernetes API, which the control plane exposes. End users can also use the 
+        Kubernetes API directly to interact with the cluster.
+
+A Kubernetes cluster can be deployed on either physical or virtual machines. To get started 
+        with Kubernetes development, you can use Minikube. Minikube is a lightweight 
+        Kubernetes implementation that creates a VM on your local machine and deploys a 
+        simple cluster containing only one node. Minikube is available for Linux, macOS, 
+        and Windows systems. The Minikube CLI provides basic bootstrapping operations for 
+        working with your cluster, including start, stop, status, and delete.
+      </p>
+    </div>
+
+    
