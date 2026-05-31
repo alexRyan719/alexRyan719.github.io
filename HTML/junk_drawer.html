@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Nobody expects the Spanish Inquisition! -->
+
+<html>
+
+  <head>
+<!--     <link rel="stylesheet" type="text/css" href="./CSS/my_steeze.css"> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/oscs.css">
+    <script src="../JS/oscs.js"></script>
+<!--     <script src="myscripts.js"></script> -->
+  </head>
+  
+  
+  <body>
+    
+
+     <div id="brandRow">  
+      <button onclick="switchBrand('matrix')">Matrix</button>
+      <button onclick="switchBrand('citrusine_')">Citrusine_</button>
+      <button onclick="switchBrand('standard')">Standard</button>
+      <button onclick="switchBrand('submarine')">Submarine</button>
+      <button onclick="switchBrand('pistachio')">Pistachio</button>
+      <button onclick="switchBrand('elFuego')">El Fuego</button>
+    </div>
+
+    <h3>Junk Drawer</h3>
+    <p>This is a place to store some bits and bobs, pieces of code, or other random 
+      info I don't know where else to put</p>
+    <h1>CodinGame Playgrounds</h1>
+
+    <p>For many years, CodinGame allowed its members to make Playgrounds. These were
+    containers that would allow a basic website and the ability to run code in the
+    browser. They were primarily used to teach concepts or demonstrate understanding of
+    concepts...kinda the same thing. </p>
+<!-- 
+    Welcome to Cyber Security Best Practices and Threat Examples!
+This is a brief guide to a list of Cyber Security Best Practices and examples of threats seen "in the wild". I will continue to add to this list as I encounter new threats and attacks!
+
+Passwords
+Passwords are no longer sufficient security for any sensitive account. You need to add Multi Factor Authentication.
+
+You should still use upper case, lower case, special characters, and numbers in your passwords. No two passwords should be exactly the same, although you can follow the same schema or pattern with some unique added or altered part to keep the resulting passwords different.
+
+Example:
+
+For your Google password:
+
+googlE123!@#123!@#
+
+This lists the service, has an uppercase character at the end of the service name, has numbers as 123, then the corresponding special characters of (for Windows) Shift + 123 respectively. I repeated only the digits and special characters as I wanted to add some extra characters, but keep less typing by not doubling the service name.
+
+For your YouTube password: youtubE123!@#123!@#
+
+So, this is a pretty secure schema, but if a hacker or malicious person discovered one or more of these passwords, it's pretty easy to see what the pattern / schema is. They would try to apply the same tactics to your other passwords.
+
+A more secure and less straightforward pattern / schema is to take a song lyric or phrase that is important to you, yet easy to remember, and take the first letter of each word. Still add other numbers and special character patterns. You could also add the length of the service name to the end.
+
+For your Google password using Never Going To Give You Up ngtgyU123!@#123!@#6
+
+For your YouTube password using Never Going To Give You Up ngtgyU123!@#123!@#7
+
+A bit more painful, but definitely more secure pattern would be to use the LAST letter of every word of a phrase or song lyric.
+
+For your Google password using Never Going To Give You Up rgoeuP123!@#123!@#6
+
+For your YouTube password using Never Going To Give You Up rgoeuP123!@#123!@#7
+
+Something much less cumbersome, yet more secure, would be to alter whether you capitalize the first or last letter based on if the length of the service name is even or odd.
+
+For your Google password using Never Going To Give You Up Ngtgyu123!@#123!@#6
+
+For your YouTube password using Never Going To Give You Up ngtgyU123!@#123!@#7
+
+These are just some examples of ways that you can ensure that your passwords are harder to guess. You still need strong Multi Factor Authentication. The point of complex passwords is to force a malicious actor or service to guess many times, which in turn should trigger detection tools.
+
+Multi Factor Authentication
+Multi Factor Authentication (MFA) is a process of using more than one method to verify your identity. Normally, a username and password is all you needed to log into an account. Now, you will need to use an additional method on top of your credentials.
+
+Originally, this was achieved with a text message (SMS) or email. Text messages are not suggested to be used for MFA. There was a major vulnerability of SMS not being encrypted cross platform. This may have been fixed, but there are more secure methods of MFA.
+
+Authenticator apps are a better form of MFA and don't rely on a network connection. There are multiple free options, including Google Authenticator and Duo. Google Authenticator is handy as it requires a login to a Google account. If you lose your device, you can simply disconnect the account login from that device, as long as you have access to your Google account / profile on another device. Then, you can set a new device as the Recovery device. Google Authenticator will generate a code that's only alid for a minute and then a new code is generated.
+
+Passkeys are considered one of the strongest forms of MFA. This is where a digital fingerprint is taken of your info and your device's info.
+
+Never Give Out Too Much Information
+Be cautious and suspicious if people, places, or services are asking for information. Use your best judgement as false positives can get annoying and inappropriate.
+
+Try Not to Get Too Much Information
+Be mindful of what you're asking of people, especially in industry. Or what you're saying in public and who can hear it.
+
+For example, if your friend moved houses, you wouldn't ask this in this way at a busy train station: "Hey, how are you liking your new place at 123 Charleston Street?"
+
+Zero Trust Mentality
+This means that, even if certain circumstances are met, don't automatically bypass security protocols.
+     -->
+    <h1>Seen in the Wild</h1>
+<!-- 
+Seen in the Wild
+These are some examples of malicious activity that I have seen "in the wild". Most of these either happened to me, happened to someone I know, or I saw explained somewhere.
+
+General Cyber Attack Concepts
+Steal your login information
+The best way to trick your family and friends is to pretend to be you. Your connections are more willing to give you money based on how well you know them. When a malicious actor steals your login credentials to a social media account, they are riding your coattails of your social status to manipulate and steal either information (including other victims) or money / gift cards.
+
+This is often done by a malicious link that will send you to a fake login website built to look just like the real login website.
+
+I've also seen spam emails with Google Docs, Google Sheets, Google Forms, or some other way of entering a username and password combination and they ask you to provide your login credentials. This is usually from a spoofed email meant to look like a school or workplace where you might have login credentials to.
+
+Trick you into paying to send you money
+I've seen this a couple ways. The first is the Nigerian Prince scam where a Nigerian Prince had his assets frozen and needed money. There was a promise of much more money to be paid back once the prince had his assets unfrozen.
+
+That's the really popular scam, but the one I've seen I detail further down as the X App "Lottery winner". That scammer was trying to convince me that I needed to send money to pay for a FedEx driver to deliver me a package of physical money. Right away, I knew it was weird to not just wire money digitally. Anytime someone asks for something before they give you something, you need to be sure that they'll actually give you that something.
+
+Facebook
+My grandma friended me again with a second account using the same picture.
+Bad actors will copy a profile picture and name to try and friend the victim's friends. They may slightly alter the profile picture to not be screened as using the same exact picture.
+
+"She" said she was in a car accident and needed me to send her money. I was more worried about her being injured that I reached out to other family to see if they could help. They told me grandma was fine and that was someone else.
+
+My relative was kidnapped in another country and needs money
+Didn't happen to me personally, but I've heard of this one. This is where they will trick an older relative into thinking they are traveling and in need of money - either car accident, stolen wallet, etc.
+X. Remedies - adjust the visibility of your Friend's list to only Friends, even then just Mutual Friends
+
+X app | Twitter
+A lottery winner reached out to gift me money
+Even having just finished a 6 month cyber security boot camp, I still somewhat fell for this. I thought to myself "If I had won the lottery, how would I randomly hook people".
+I was about 60-80% sure this was a scam. But that 20-40%.
+They sent me a picture of a FedEx driver, the name of the driver, the ID of the driver, and the whole time I'm wondering "why do you care so much about the driver".
+They wanted to deliver physical bundles of money to me via this driver.
+Click Bait Ads
+Already, you need to never click a click bait add. Just don't do it.
+
+Car Insurance
+There was an add with a couple people discussing car insurance. They made it sound very appealing to click and see how much the user could save. It started with how insurance is a scam as it's required to drive. A large portion of insurance fees go to commission to the sales agent. I clicked it, started filling out the info, using fake info, until it just got too much. It was wanting phone number, physical address, email. I used Shotgun Willie's for the address, which is an adult club in Denver.
+Whack a Sadam
+I downloaded a virus when I tried to play a mini game in a click bait ad to "Whack Sadam Hussein"
+Phone Call
+Student Loan Forgiveness
+I gave out a little too much personal information before I realized the person calling wasn't from my school or the government outfit that holds my loans. It was a cold call with my name and number.
+LinkedIn
+Someone made a fake profile of a high ranking member of the non profit I work for. That profile sent connection requests to several, if not all, of our team. I saw this the day before I acted, figured it looked scammy and ignored it. However, technically, I help manage the IT Security for where I work.
+So today, when I realized it was probably something I should head off, I ensured it was a fake profile by finding the real profile, which is verified and has 500+ connections. I included links to both profiles and sent direct messages to all those involved: the victim the malicious actor was impersonating, and the victims that accepted the connection requests.
+
+When I started at this company, someone used LinkedIn (I assume) to find out who the CEO / President used to be of the company I just hired on at and sent me a text message "from them". I asked the person that was training me if it was legit, and he told me "oh no, that used to be the president long ago. That's a scam."
+The reason I think they got my phone number, and possibly email, is the LinkedIn data breach.
+
+From Google AI:
+
+"""
+
+Yes, LinkedIn has experienced data breaches in the past where phone numbers were leaked. These leaks, which have involved scraping of public profiles and other security incidents, have exposed phone numbers along with other personal and professional information such as full names, email addresses, and job titles.
+
+Details:
+
+Past Leaks: Several incidents involving the exposure of LinkedIn user data have occurred, with one notable instance in 2021 where a hacker advertised 700 million profiles for sale on a dark web forum.
+
+Data Compromised: The leaked data included full names, email addresses, phone numbers, LinkedIn profile URLs, job titles, company information, social media account links, and more.
+
+Impact on Users: Leaked phone numbers can be used for malicious activities such as spam calls, phishing attempts, and identity theft.
+
+Recommendations: Users are advised to be cautious of unsolicited calls or messages and to consider limiting the visibility of their phone number on LinkedIn or other public platforms.
+
+"""
+
+OnlyFans
+I have a free subscription to a lady that makes content on there. I was contacted by someone pretending to be her on Facebook. I looked her up and found her real Facebook profile, which had the same image for the profile picture as this fake account. I told the fake account I know they are fake as she would just talk to me with her real profile. The fake account said "oh no, this is my private account."
+The way that these services work is the content creator would only use their established social media accounts to conduct business. There is no reason to make "a private account" and talk with fans or customers. Period. I told the fake account that when I find them, I'm not going to go easy on them. Maybe even physical violence. She continued to argue, so I reported the fake profile and sent a DM to the real artist saying that I had a fake profile contact me.
+
+I had a fake OF account try to get me to subscribe to what looked like a OF account that was using other people's content. The description and aspects about it seemed like it was managed by an Indian company that just had a bunch of content of women that didn't work there. I reported this profile as well, as the "person" that was pretending to try and sell me content wasn't able to prove their identity. I asked for this "woman" to send me a picture with "a-Rye" written on her. "She" sent me a poorly photoshopped image of the text "a-Rye"...typed and with a color filled background that they tried to match her skin tone with. "She" was a darker skinned lady and the color box that the text was in wasn't a perfect match. This was laughably horrible of a job trying to pose as someone else. AKA Catfishing. The "lady" also tried to do it with a coffee cup by buying a coffee somewhere and photoshopping my alias of "a-Rye" on the coffee cup. I just stopped responding and reported the OF profile and explained that I think that profile was stealing content from other creators.
+Groypers
+This is more a concern of communication and proper censorship. If you can discuss any topic long enough with a Groyper, there is usually SOME common ground. Careful engaging, try to engage with respect even when none is shown. After a while, they almost always (as we all would) simmer down to respectful dialogue.
+  -->   
