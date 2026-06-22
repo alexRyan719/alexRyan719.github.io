@@ -87,7 +87,7 @@ Guard #1: Oh, I see. Right.
     This is to keep track of my CodinGame playground: Beginner Python Concepts. It's still up, but they 
     disabled the functionality to run the code in the browser. 
 
-1/13 Intro
+1/13 Intro ----------------------------------------------------------------------------------------------------------
 
    Intro
 Hello and welcome to Beginner Python Concepts! Before we get started with actual Python code, it's important to understand what programming is all about.
@@ -116,7 +116,7 @@ The best way to learn new concepts is to be able to teach said concepts to other
 
 For the second part video of this playground, visit YouTube here: https://www.youtube.com/watch?v=hCZ4EUrBJC4
 
-2/13 Hello World
+2/13 Hello World ----------------------------------------------------------------------------------------------------------
 
     Hello World
 This is the classic "Hello World" program in Python. This will print whatever String (array of chars / group of letters) you have between the single (' ') or double quotes (" ")
@@ -189,8 +189,124 @@ print("Set the start point as the fifth character from the end")
 print(test_string[-5:])
 print(test_string[-10:-3])
 
-3/13 Comments
-    
+3/13 Comments ----------------------------------------------------------------------------------------------------------
+
+    Comments
+Comments are very useful in programming. If you're coding for work or to be published, you'll want to explain your code with comments. You can also use comments in debugging to investigate your code further.
+
+# This is a single line comment. Any line that starts with a # will be seen as a comment by the compiler / interpreter / computer. 
+
+'''
+This
+is
+a
+multi
+line
+comment
+'''
+
+"""
+This
+is
+also
+a 
+multi
+line
+comment
+"""
+
+# It gets a weird value here, still not sure why?
+Disabling parts of your code
+Sometimes, you just want a part of your code to stop temporarily. I often find myself doing this when trying to optimize my code or when trying to single out a corner case in my code.
+
+Let's take that mass of code from the previous page and try looking at each piece individually.
+
+Try "turning pieces on and off again"!
+123456789101112131415161718192021222324252627282930313233
+
+
+print("Hello! " * 3)
+        
+# print("For the rest of the examples, let's declare a String variable to use")
+
+test_string = "Hello World, but now our new string!"
+
+print("Try slicing different parts of the string")
+
+print(test_string[1:6])
+
+# print("Print every other letter")
+        
+# print(test_string[::2])
+
+# print("Reverse the string")
+        
+# print(test_string[::-1])
+
+# print("Print single char at a certain index")
+        
+# print(test_string[0])
+
+# print("This also works backwards with a negative index")
+        
+# print(test_string[-1])
+# print(test_string[-5])
+
+4/13 Primitive Variables ----------------------------------------------------------------------------------------------------------
+
+  Primitive Variables
+Primitive Variables are simple, single value variables used in computing. Think of them as shipping boxes to contain data. You need the right type of shipping box / container for different types of data.
+
+Now, with Python, it's harder to see what type a variable is. Python does not require you to declare the type of variable when declaring Primitive variables (as opposed to objects).
+
+Strings / Arrays of Chars = "Hello World!" / "This is also a string" / Any group of characters contained in single ('') or double ("") quotes
+Chars / Characters = 'a', 'b', 'Z', '!' / Any single letter or character. Can be in single or double quotes (for Python, not necessarily other languages)
+Ints / Integers = 5 / 4 / 5,000,000 / any whole number
+Float / Floating Point = 10.0
+Bool / Boolean = True / False
+To see what type your variable is, use the built-in type() function.
+123456789101112
+
+example_string = "Hello World!"
+example_char = 'a'
+example_int = 5
+example_float = 10.0
+example_boolean = True
+
+print(type(example_string))
+print(type(example_char))
+print(type(example_int))
+print(type(example_float))
+print(type(example_boolean))
+
+5/13 Functions ----------------------------------------------------------------------------------------------------------
+
+    Functions
+Functions are sections of code that are meant to accomplish one (or few) action(s). Functions are used to organize code, as well as allow for modularity. Modularity means that code can be reused with little to no adjustments.
+
+When defining a function, you start with the keyword "def", followed by the name of the function and attached parameters / arguments for the function, and finally a colon (:). Any code that is meant to be contained in the function needs to be indented one indent further than the function declaration line.
+
+Try changing the values for each of the functions!
+123456789101112131415161718192021222324252627
+
+
+def multply(a, b):
+  return a*b
+In this example, the declaration line is "def multiply(a, b):". This means that we have a function named "multiply" that takes two arguments, "a" and "b". The next line returns the value of the two input arguments when they are multiplied together (or the product of the two inputs).
+
+To call a function, we would do something like this:
+
+multiply(2, 5)
+Notice that you don't actually see anything in your terminal / output. This is because the nature of this function simply multiplies the arguments and returns the product. If we want to see what value is returned from this function, we would need to either print our call to that function, or add print functionality within the function.
+
+print(multiply(2, 5)
+Or
+
+def multply(a, b):
+  print(a*b)
+  return 0
+Either way, we need to define our function BEFORE we try to call it / envoke it / run it. The compiler / interpreter / computer reads our code top down, left to right. This means that if we try to call our function before we define it, we will get an error. The computer doesn't know what we're talking about and will ask us to clarify.
+
     -->
   
 
