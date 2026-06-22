@@ -289,6 +289,33 @@ When defining a function, you start with the keyword "def", followed by the name
 Try changing the values for each of the functions!
 123456789101112131415161718192021222324252627
 
+    def multiply(a, b):
+  return a*b
+
+# A single '/' will yield a float / partial / decimal point having number.
+def divide(a, b):
+  return a/b
+
+# A double '/' will yield an integer / whole number answer.
+def integer_divide(a, b):
+  return a//b
+
+def add(a, b):
+  return a+b
+
+def subtract(a, b):
+  return a-b
+
+def modulo(a, b):
+  return a%b
+
+print(multiply(2,5))
+print(divide(10,3))
+print(integer_divide(10,3))
+print(add(2,40))
+print(subtract(5,2))
+print(modulo(10,3))
+
 
 def multply(a, b):
   return a*b
@@ -307,6 +334,625 @@ def multply(a, b):
   return 0
 Either way, we need to define our function BEFORE we try to call it / envoke it / run it. The compiler / interpreter / computer reads our code top down, left to right. This means that if we try to call our function before we define it, we will get an error. The computer doesn't know what we're talking about and will ask us to clarify.
 
+6/13 Control Flow ----------------------------------------------------------------------------------------------------------
+
+    Control Flow
+Control Flow refers to the use of comparison logic to determine what to do next. By that, I mean using if, elif, else statements to filter what code to run based on certain conditions.
+
+The test cases provided test some of the common "corner cases" you may want to test.
+1234567891011121314151617181920212223
+
+    def control_flow(score):
+  if score >= 90:
+    return "A"
+  elif score >= 80:
+    return "B"
+  elif score >= 70:
+    return "C"
+  elif score >= 60:
+    return "D"
+  else:
+    return "F"
+          
+print(control_flow(1000000))
+print(control_flow(95))
+print(control_flow(90))
+print(control_flow(89))
+print(control_flow(85))
+print(control_flow(75))
+print(control_flow(65))
+print(control_flow(59))
+print(control_flow(0))
+print(control_flow(-1000))
+
+
+If and elif statements will execute if the expression equates to True or 1. If the expression evaluates down to any other value, the attached code won't execute.
+
+Here are some examples of such:
+123456789101112131415
+
+    
+the_meaning_of_life = 42
+valid = False
+
+if the_meaning_of_life == 42:
+  print("Ran")
+
+if 1:
+  print("1 worked as well!")
+ 
+if valid:
+  print("It's valid")
+else:
+  print("It's not valid")
+
+
+You can also chain conditions in your if, elif, else statement blocks. This can be done with and, or, not, and xor.
+
+Try changing the conditions
+1234567891011121314151617
+
+    my_int = 5
+
+if my_int < 10 and my_int > 0:
+  print("It's between 0 and 10")
+
+my_char = 'c'
+to_search = "Does this string have your letter?"
+
+if my_char not in to_search:
+    print("Nope, my char is not in there!") 
+
+if my_char not in to_search or 1:
+    print("Either part can be true") 
+
+if my_char not in to_search or 1 or my_int < -1000:
+    print("You can have as many conditionals as you want!")  
+
+    7/13 Loops ----------------------------------------------------------------------------------------------------------
+
+    Loops
+Loops are very useful when needing to do the same action multiple time (iterations). For loops are usually better when the amount of iterations is known and while loops are usually better when the number of iterations is not known.
+
+However, you can pretty much do any process (algorithm) with either style of loop. You can also use recursion.
+
+Iterate through every char in a string
+
+Try changing the string!
+1234
+
+    test_str = "Hello World!"
+for char in test_str:
+  print(char)
+
+
+Indexes are used to keep track of what we're working with for each iteration. With while loops, you have to manually change the index. Be careful, infinite loops are created when a terminating condition is never met. IE the index never changes, a count never changes, or whatever condition we decide for the loop.
+
+Try adjusting the index!
+1234567
+
+    index = 0
+test_str = "Hello Other World!"
+while index < len(test_str):
+  print(test_str[index])
+  index += 1
+    
+
+
+In other languages, there are do while loops. However, Python doesn't use them without some extra effort.
+
+You can also use the range() function to set a start, stop, and step for your for loops. This is similar to the start, stop, and step of string slicing.
+
+Start is the initial value that the loop range will start at.
+
+Stop is the end limit that the loop value will reach in the range.
+
+Step is the amount that the loop will count by.
+
+Try changing n!
+12345
+
+    n = 100
+
+for num in range(1,n+1,2):
+  print(num)
+
+
+Here is a nifty way to demonstrate Multiplication and Division as loops of Addition and Subtraction!
+
+Try me!
+12345678910111213141516171819202122
+
+# Multiplication
+to_mult = 5
+mult_times = 10
+mult_ans = to_mult
+
+for num_m in range(1,mult_times):
+    mult_ans += to_mult
+
+print(mult_ans)
+
+# Division
+to_div = 50
+div_times = 5
+div_ans = div_times
+div_count = 0
+
+while div_ans <= to_div:
+    div_ans += div_times
+    div_count += 1
+
+print(div_count)
+
+8/13 Recursion ----------------------------------------------------------------------------------------------------------
+
+   Recursion
+To demonstrate recursion, we need to define a function. The concept is where we have a function that calls itself until a condition is met. It's also easy to write infinite loops with recursion. The condition needing to be met is known as the Base Case. Once we reach that Base Case, we return all the data we've calculated.
+
+Try it out here!
+12345678910111213
+
+test_str = "Hello World!"
+
+def recurse_this(n):
+  if n == 1:
+    print(test_str[len(test_str) - n])
+    print("This is the base case!")
+  else:
+    print(test_str[len(test_str) - n])
+    #print("iteration: " + str(n))
+    recurse_this(n-1)
+
+recurse_this(len(test_str))
+
+9/13 Examples of Loops ----------------------------------------------------------------------------------------------------------
+
+    Loop Examples
+It's helpful to see a few of the ways we would want to use these concepts.
+
+So, this bit of code here:
+
+This is written out, verbatum, what is going on in loop logic
+1234567891011121314151617181920212223242526
+
+    my_str = "My String!"
+upper_case_count = 0
+
+if my_str[0].isupper():
+  upper_case_count += 1
+if my_str[1].isupper():
+  upper_case_count += 1
+if my_str[2].isupper():
+  upper_case_count += 1
+if my_str[3].isupper():
+  upper_case_count += 1
+if my_str[4].isupper():
+  upper_case_count += 1
+if my_str[5].isupper():
+  upper_case_count += 1
+if my_str[6].isupper():
+  upper_case_count += 1
+if my_str[7].isupper():
+  upper_case_count += 1
+if my_str[8].isupper():
+  upper_case_count += 1
+if my_str[9].isupper():
+  upper_case_count += 1
+  
+print(upper_case_count)
+
+
+Can be simplified with using loops, like so:
+
+Much more compact code
+123456789
+
+    my_str = "My String!"
+upper_case_count = 0
+
+for char in my_str:
+  if char.isupper():
+    upper_case_count += 1
+    
+print(upper_case_count)
+
+
+Another nifty thing you can accomplish with a bit of loop logic and Python keyword shortcuts:
+
+This is some basic pattern matching
+123456789101112
+
+    vowels = "aeiouAEIOU"
+my_str = "This is my string!"
+vowel_count = 0
+
+for char in my_str:
+  if char in vowels:
+    vowel_count += 1
+    
+print(vowel_count)
+
+10/13 Data Structures ----------------------------------------------------------------------------------------------------------
+
+    Data Structures
+Data structures are objects, which means they are more complex variables. All objects can technically be considered data strucures, as they can hold more data than primitive variable. However, most Computer Scientists are referring to objects like Lists / Arrays, Dictionaries, Trees, Graphs, Etc when discussing data structures.
+
+Arrays are groups of primitive variables all stored together. In Python, we refer to these as lists. Here are a couple of examples of lists:
+
+example_list = []
+
+example_list_2 = [1,2,3]
+
+example_list_3 = ['a','b','c']
+
+example_list_4 = [1, 'b', 3]
+To add elements to a list, use the .append() function. To access specific items in a list, you can use an index.
+
+Try adding, accessing, and removing elements from this list!
+12345678910111213
+
+    example_list = []
+example_list.append(1)
+
+print(example_list)
+
+example_list.append(2)
+example_list.append(3)
+
+print("First item at index 0: " + str(example_list[0]))
+print("First item at index 1: " + str(example_list[1]))
+print("First item at index 2: " + str(example_list[2]))
+print(example_list)
+
+
+To sort a list, use the .sort() or sorted() functions.
+
+Try adding, accessing, and removing elements from this list!
+12345678910111213141516
+
+    to_sort = [9,8,7,6,5,4,3,2,1]
+
+print("Just using sorted(), which sorts the list for use but doesn't ACTUALLY sort the data stored in the variable")
+print(sorted(to_sort))
+print(to_sort)
+print()
+
+print("Assigning the sorted version of the list to a new list variable")
+sorted_list = sorted(to_sort)
+print(sorted_list)
+print()
+
+print("Using .sort()")      
+to_sort.sort()
+print(to_sort)
+
+
+Dictionaries are Python's answer to Switch Statements. The logic of a dictionary is to return a value based on an input value / key. In other languages, Switch Statements are used to accomplish similar logic. Here are a couple examples of dictionaries:
+
+alphabet_dict  = {
+  'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,'j':10
+  ,'k':11,'l':12,'m':13,'n':14,'o':15,'p':16,'q':17,'r':18
+  ,'s':19,'t':20,'u':21,'v':22,'w':23,'x':24,'y':25,'z':26
+}
+
+number_dict  = {
+  1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'
+  ,11:'k',12:'l',13:'m',14:'n',15:'o',16:'p',17:'q',18:'r'
+  ,19:'s',20:'t',21:'u',22:'v',23:'w',24:'x',25:'y',26:'z'
+}
+Dictionaries are created in a similar way to lists.
+
+Try adding, accessing, and removing elements from this dictionary!
+123456789101112131415
+
+    example_dict = {}
+#to_add = 
+
+
+letter_dict = {}
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+for char in alphabet:
+  if char in letter_dict:
+    letter_dict[char] += 1
+  else:
+    letter_dict[char] = 1
+    
+print(letter_dict)
+
+
+Lists of Lists
+2D Arrays are commonly used in coding. In Python, this can be thought of as a list of lists.
+
+Try accessing and setting different values in the list of lists!
+12345678910111213141516171819202122232425262728
+
+    my_list = []
+my_list_of_lists = []
+
+width = 7
+height = 5
+
+for num in range(height):
+  for n in range(width):
+    my_list.append(n)
+  my_list_of_lists.append(my_list)
+  my_list = []
+
+for item in my_list_of_lists:  
+    print(item)
+    print()
+
+x = 0
+y = 0
+
+# Try adjusting the coordinates by adjusting x and y. 
+print(my_list_of_lists[y][x])
+
+n = 3
+n_2 = 2
+
+# Or, you can change n or n_2 to change coordinates.
+print(my_list_of_lists[y+n][x+n_2])
+
+11/13 Example Algorithms ----------------------------------------------------------------------------------------------------------
+
+Example Algorithms Explained
+Here are some example algorithms to see these Python concepts in use.
+
+ROT13
+ROT13 stands for rotation of 13 values. This means that every character / letter in the plain text will be changed / encrypted to a different character 13 values away. 13 is the classic beginning number for a rotation encryption algorithm due to the nature of being able to decrypt the cipher text simply by encrypting the cipher text again with the same ROT13 algorithm. This is also known as Symmetric Encryption.
+
+Click "Reset Code" to get the original code example back.
+Try it out!
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051
+
+    def rot13(plain_text):
+    
+    alphabet_dict  = {
+        'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,'j':10
+        ,'k':11,'l':12,'m':13,'n':14,'o':15,'p':16,'q':17,'r':18
+        ,'s':19,'t':20,'u':21,'v':22,'w':23,'x':24,'y':25,'z':26
+    } 
+    
+    number_dict  = {
+        1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'
+        ,11:'k',12:'l',13:'m',14:'n',15:'o',16:'p',17:'q',18:'r'
+        ,19:'s',20:'t',21:'u',22:'v',23:'w',24:'x',25:'y',26:'z'
+    }
+
+    # other_dict = {
+    #     0:'0',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9'
+    #     ,10:':',11:';',12:'<',13:'=',14:'>',15:'?',16:'@',17:'!',18:'"'
+    #     ,19:'#',20:'$',21:'%',22:'&',23:'\'',24:'(',25:')'
+        
+    # }
+
+    # other_other_dict = {
+    #     0:'*',1:'+',2:',',3:'-',4:'.',5:'/'
+    # }
+
+    found = False
+    #found_2 = False
+    cipher_text = ""
+    new_index = 0
+    capitalized = False
+    new_char = ' '
+  
+    for char in plain_text:
+
+        # Check for capitalization and set capitalized accordingly 
+        if char.isupper():
+            capitalized = True
+
+        # Check if char is in alphabet_dict and assign index if so
+        if char.lower() in alphabet_dict:      
+            new_index = int(alphabet_dict[char.lower()]) + 13
+            found = True
+
+        # If the char is in other_dict, set found_2 to True
+        # if char.lower() in other_dict:      
+        #     #new_index = int(alphabet_dict[char.lower()]) + 13
+        #     found_2 = True
+        
+        # If the new index is larger than 26, wrap around from the beginning
+        if new_index > 26:
+            new_index %= 26
+
+        # Build the return string based on if capitalized and found
+        if capitalized and found:
+            cipher_text += number_dict[new_index].upper()
+        elif found:
+            cipher_text += number_dict[new_index]
+        else:
+            cipher_text += char
+
+
+        
+        # elif found2:
+        #     print("It's found2")
+            
+        # else:
+        #     if char in other:
+        #         print(ok)
+        #     elif char in other_2:
+        #         print(ok)
+        #     else:
+        #         cipher_text += char
+        
+        capitalized = False
+        found = False
+        #found_2 = False
+    #print("DEBUG")
+    
+    return cipher_text
+
+print(rot13("Uryyb jbeyq!@#$%^&*()_+-=/\\<>?,.~`"))
+print(rot13("Hello world!@#$%^&*()_+-=/\\<>?,.~`"))
+      
+
+    
+
+The concept of a circular array is demonstrated with these lines:
+
+if new_index > 26:
+    new_index -= 26
+So, even if the new index is too large to find the corresponding cipher text character, the index is adjusted to create the illusion of a circular array. A better (and more scalable) way to do this would be to use the modulo operator (%) to ensure any number, no matter how large, would be able to yield a corresponding cipher text character.
+
+if new_index > 26:
+    new_index %= 26
+Rot N
+13 is the most common value, as it allows for Symmetric Encryption. However, it's fairly simple to change this algorithm to accept any value for the rotation. To account for larger values, we need to change the index modification to the modulo style.
+
+Try it out!
+123456789101112131415161718192021222324252627282930313233343536373839404142
+
+    def rot_n(plain_text, n):
+  alphabet_dict  = {
+    'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,'j':10
+    ,'k':11,'l':12,'m':13,'n':14,'o':15,'p':16,'q':17,'r':18
+    ,'s':19,'t':20,'u':21,'v':22,'w':23,'x':24,'y':25,'z':26
+  }
+  number_dict  = {
+    1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'
+    ,11:'k',12:'l',13:'m',14:'n',15:'o',16:'p',17:'q',18:'r'
+    ,19:'s',20:'t',21:'u',22:'v',23:'w',24:'x',25:'y',26:'z'
+  }
+
+  cipher_text = ""
+  new_index = 0
+  capitalized = False
+  new_char = ' '
+  
+  for char in plain_text:
+    if char.isupper():
+      capitalized = True
+    if char.lower() in alphabet_dict:      
+      new_index = int(alphabet_dict[char.lower()]) + n
+      if new_index > 26:
+        new_index %= 26
+      if new_index < 1:
+        new_index %= 26
+        new_index += 26
+      if capitalized:
+        cipher_text += number_dict[new_index].upper()
+      else:
+        cipher_text += number_dict[new_index]
+    else:
+      cipher_text += char
+    capitalized = False
+    
+  return cipher_text
+
+print(rot_n("Uryyb jbeyq!@#$%^&*()_+-=/\\<>?,.~`", 14))
+print(rot_n("Ifmmp xpsme!@#$%^&*()_+-=/\\<>?,.~`",-1))
+print(rot_n("Hello world!@#$%^&*()_+-=/\\<>?,.~`",12))
+print(rot_n("Tqxxa iadxp!@#$%^&*()_+-=/\\<>?,.~`",14))
+
+
+Generate Character Messages via a Message Dictionary && Calculating a Message Code
+Say you want to cut down on the time taken with repetitive messages you want your game characters to say to the player. You could do this by using a dictionary to return a message based on an input value.
+Try it out!
+12345678910111213141516171819
+
+    msg_dict = {
+  1:"Nice weather we're having!", 2:"Careful warrior...", 3:"Welcome to my blacksmith shop!", -1:"Watch it there...", 
+  "h_1":"Very spoooooky weather we're having!",
+  "c_1":"Very frostie weather we're having!", 
+  "v_1":"Very bubbly weather we're having!",
+  "eZ":"Hasta la vista, baby",
+  "aB":"Groovy!"
+}
+
+def show_all_msg():
+  for num in msg_dict:
+    print(msg_dict[num])
+          
+show_all_msg()
+
+
+
+
+
+
+You can also add the complexity of Holiday Based messages, Region Based messages, and many more!
+Try it out!
+12345
+
+
+def select_message_code():
+  
+  return 0
+
+12/13 Debugging ----------------------------------------------------------------------------------------------------------
+
+    Debugging
+One of the most frustrating things about learning a new coding language is the debugging. Debugging is the removal of flaws (bugs) in your code. There are a couple ways to categorize bugs.
+
+Syntax Errors
+The more obvious bugs are known as Syntax Errors. These happen whenever you misspell something or leave something out.
+
+Try to fix the code!
+12345678910111213141516171819
+
+    print(Hello World")
+      
+def test_func(n)
+      print("test worked!")
+      print(n)
+      
+prnt(test_fun(10)))
+
+print(((test_func(10)
+        
+my_int = 5
+my_second_int = 10
+print("My int is: " + my_int)
+
+# However, these seem to be ok... (no need for casting to str)
+print(my_int)
+print(my_int,my_second_int)
+
+
+
+Logic Errors
+Another type of bug is a Logic Error. These are harder to detect as they don't usually affect your code being able to run. These errors are more with your process for the task you're trying to do (aka algorithm).
+
+The first few lines show an index out of range error. This is pretty common in coding as the index usually starts at 0.
+
+Try to fix the code!
+1234567891011121314
+
+    my_list = [1,2,3,4,5]
+
+print(my_list[10])
+      
+print(my_list[-10])
+
+# Add the numbers 0-100 together and print the sum.
+my_sum = 0
+for num in range(100):
+      my_sum *= 5
+      
+print(my_sum)
+      
+
+
+Notice that not only are you not finding the sum of all those numbers added together, you're also mulitplying by 0!
+
+Another thing to be aware of is PEMDAS (the order of operations in math).
+
+PEMDAS - Parenthesis Exponent Multiply Divide Add Subtract
+If you think that your bug is due to math not being done in the correct order, you can separate out pieces of your equation with parenthesis.
+
+Rubber Ducks
+An important concept in Computer Science is the Rubber Duck. Now, this can really be any inanimate object (or pet even), as long as it doesn't respond. The idea is to explain what your code is doing. Also, try explaining it different ways from different angles / points of view. Eventually, the hope is that you will discover the flaws / bugs in your code this way. In college, we used to bring real rubber ducks to the CS lab. Nowadays, I use a red octopus, or Roctopus!
+
+13/13 Sorting Algorithms ----------------------------------------------------------------------------------------------------------     
+
+    Sorting Algorithms
+A common problem in Computer Science is sorting data. Regardless of what data structure you're working with, you'll most likely want the ability to sort it in various ways. Sorting algorithms are also a very nice segway into Big O Complexity and Optimization concepts!
     -->
   
 
