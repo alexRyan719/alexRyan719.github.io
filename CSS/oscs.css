@@ -51,6 +51,15 @@ li.navbar {
  */
 }
 
+#intro {
+  padding: 1% 2% 1% 2%;
+  background: #0a4a48;
+  border: black;
+  border-radius:25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 #brandRow2 {
 
 }
