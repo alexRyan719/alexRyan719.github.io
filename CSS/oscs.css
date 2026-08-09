@@ -19,7 +19,7 @@ pre {
 .navbar {
   padding: 1% 2% 1% 2%;
   background: #a2d5ab;
-  border: black;
+  /* border: black; */
   border-radius:25px;
   margin-top: 50px;
   margin-bottom: 50px;
