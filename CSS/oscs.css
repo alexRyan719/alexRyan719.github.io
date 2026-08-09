@@ -32,8 +32,9 @@ p {
 }
 
 a {
-  color:black;
+  color: black;
   font-size: 25px;
+  text-decoration: none;
 /*   padding: 20px; */
 }
 
