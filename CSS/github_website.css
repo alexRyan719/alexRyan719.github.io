@@ -12,6 +12,13 @@ Dennis: [interrupting] Listen, strange women lyin' in ponds distributin' swords 
   from the masses, not from some farcical aquatic ceremony.
 */
 
+/* Main navbar for homepage  */
+
+a.ultra_nav {
+    color: red;
+    size: large;
+}  
+
 html {
 /*   background: #369; */
   background: black;
