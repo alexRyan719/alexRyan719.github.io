@@ -15,12 +15,13 @@ Dennis: [interrupting] Listen, strange women lyin' in ponds distributin' swords 
 /* Main navbar for homepage  */
 
 .ultra_nav a{
-    color: red;
+    color: black;
     size: large;
+    padding: 10px;
 }  
 
 .ultra_nav a:hover {
-  color: black;
+  color: gray;
   font-size: 25px;
   text-decoration: none;
 }
