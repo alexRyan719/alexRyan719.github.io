@@ -14,10 +14,17 @@ Dennis: [interrupting] Listen, strange women lyin' in ponds distributin' swords 
 
 /* Main navbar for homepage  */
 
-a.ultra_nav {
+.ultra_nav a{
     color: red;
     size: large;
 }  
+
+/* a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+/*   padding: 20px; */
+} */
 
 html {
 /*   background: #369; */
