@@ -13,7 +13,6 @@ Dennis: [interrupting] Listen, strange women lyin' in ponds distributin' swords 
 */
 
 /* Main navbar for homepage  */
-
 .ultra_nav a{
     color: black;
     size: large;
@@ -29,6 +28,18 @@ Dennis: [interrupting] Listen, strange women lyin' in ponds distributin' swords 
 
 /*   padding: 20px; */
 
+/* Button class */
+.link-button {
+  display: inline-block;     /* Allows padding and width settings */
+  background-color: #28a745; /* Green background */
+  color: white;              /* White text */
+  padding: 10px 20px;        /* Padding inside the button */
+  text-decoration: none;     /* Removes the default link underline */
+  border-radius: 5px;        /* Slightly rounded corners */
+  font-size: 16px;           /* Text size */
+  font-family: sans-serif;
+  transition: background 0.2s;
+}
 
 html {
 /*   background: #369; */
